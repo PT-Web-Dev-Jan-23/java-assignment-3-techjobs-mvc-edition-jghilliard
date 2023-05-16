@@ -28,7 +28,9 @@ public class ListController {
         columnChoices.put("location", "Location");
         columnChoices.put("positionType", "Position Type");
         columnChoices.put("coreCompetency", "Skill");
-
+        //Added ("all", "Full Job List") to tableChoices so that "Full Job List is rendered
+        //as a link and passes "all" back to the controller to render to full list.
+        tableChoices.put("all", "Full Job List");
         tableChoices.put("employer", JobData.getAllEmployers());
         tableChoices.put("location", JobData.getAllLocations());
         tableChoices.put("positionType", JobData.getAllPositionTypes());
