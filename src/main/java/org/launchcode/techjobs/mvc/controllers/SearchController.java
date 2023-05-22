@@ -41,6 +41,8 @@ public class SearchController {
         }
         model.addAttribute("jobs", jobs);
         model.addAttribute("columns", columnChoices);
+        //Bonus Mission 1: pass in the searchType under a new attributeName so that it can remain selected.
+        model.addAttribute("sT", searchType);
         return "search";
 
     }

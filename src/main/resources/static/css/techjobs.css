@@ -44,3 +44,13 @@ label {
 .centered {
     text-align: center;
 }
+.employerClass {
+    font-weight: bold;
+    font-style: italic;
+}
+.nonCodingClass{
+    color: red;
+}
+.codingClass{
+    color: green
+    }

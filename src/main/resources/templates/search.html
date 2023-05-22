@@ -12,7 +12,10 @@
 
     <form th:action="@{/search/results}" method = "post">
         <h2>Search by:</h2>
-
+<!--Bonus Mission 1: changed the th:checked to ${column.key == sT} which is the searchType
+string I passed to the SpringBoot model in searchController  using the name searchType did not work.
+Bonus Mission 2: trying to get this to work...
+th:class="${job.coreCompetency.equals('Non-coding') ? nonCodingClass : codingClass", -->
         <p>
             <span th:each="column : ${columns}">
                 <input
@@ -20,7 +23,7 @@
                         name="searchType"
                         th:id="${column.key}"
                         th:value="${column.key}"
-                        th:checked="${column.key == 'all'}"/>
+                        th:checked="${column.key == sT}"/>
                 <label th:for="${column.key}" th:text="${column.value}"></label>
             </span>
 
@@ -48,7 +51,7 @@
         </tr>
         <tr>
             <td>Employer</td>
-            <td th:text="${job.employer}"></td>
+            <td class = "employerClass" th:text="${job.employer}"></td>
         </tr>
         <tr>
             <td>Location</td>
